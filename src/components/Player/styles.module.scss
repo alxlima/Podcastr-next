@@ -25,7 +25,7 @@
   footer {
     align-self: stretch; //[stretch]-ocopo a largura toda do centro botões
 
-    &.empty {   //[{!episode ? styles.empty :''}] adiciono css, caso somente tenha episodio
+    &.empty .progress {   //[{!episode ? styles.empty :''}] adiciono css, caso somente tenha episodio
       //[&]- Quando a estilização estiver em empty
       opacity: 0.5; // aplico opacidade em todo conteudo deste
     }
@@ -110,13 +110,22 @@
     transition: 0.2s;
 
     &:disabled {
-      cursor: default;  
+      cursor: default;
+      opacity: 0.5;
     }
 
     &:hover:not(:disabled){// quando passar mouse no botão que não estiver desativado
       filter: brightness(0.7);   // aplico efito de escurecimento brightness em 0.95
-
     }
+
+    &.isActive {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg); // inverto cor do botão svg- repedit 
+    }
+
+    &.isActive:hover {
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg); // inverto cor do botão sv
+    }
+
 
     &.playButton {
       width: 4rem;

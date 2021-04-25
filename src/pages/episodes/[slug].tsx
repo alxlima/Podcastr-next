@@ -3,13 +3,15 @@
 import { format, parseISO} from 'date-fns';
 import  ptBR  from 'date-fns/locale/pt-BR';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router'
 import { api } from '../../services/api';
-import  Image  from 'next/image';
+import Image  from 'next/image';
 import Link from 'next/link';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
   
 import styles from './episode.module.scss';
+import { usePlayer } from '../../contexts/PlayerContext';
+import React from 'react';
+import Head  from 'next/head';
 
 // tipagem de array de episodios
 type Episode = {
@@ -30,9 +32,13 @@ type EpisodeProps = {
 }
 
 export default function Episode( { episode }: EpisodeProps) {
-  // const router = useRouter();
+  const { play } = usePlayer();
      return (
         <div className={styles.episode}>
+            <Head> 
+              <title>{episode.title} |🎵 Podcastr</title>
+            </Head>
+
            <div className={styles.thumbnailContainer}>
               <Link href="/" >
                 <button type="button">
@@ -45,7 +51,7 @@ export default function Episode( { episode }: EpisodeProps) {
                src={episode.thumbnail}
                objectFit='cover' 
               />
-             <button>
+             <button type="button" onClick={()=>play(episode)}>
                <img src="/play.svg" alt="Tocar episódio" />
              </button>    
           </div>
@@ -110,4 +116,8 @@ export const getStaticProps:GetStaticProps = async (ctx) => { //[ctx]-contexto u
       },
       revalidate: 60 * 60 * 24, // revalido carregamento desta pagina cada 24horas   
    }
+}
+
+function playerContext(playerContext: any, arg1: { episode: Episode; }): {} {
+   throw new Error('Function not implemented.');
 }
