@@ -25,11 +25,34 @@
   footer {
     align-self: stretch; //[stretch]-ocopo a largura toda do centro botões
 
-    &.empty {
+    &.empty {   //[{!episode ? styles.empty :''}] adiciono css, caso somente tenha episodio
       //[&]- Quando a estilização estiver em empty
       opacity: 0.5; // aplico opacidade em todo conteudo deste
     }
   }
+}
+
+.currentEpisode {
+  text-align: center;
+
+  img {
+    border-radius: 1.5rem;
+  }
+
+  strong {
+    display: block;
+    margin-top: 2rem;
+    font: 600 1.25rem lexend, sans-serif;
+    line-height: 1.75rem;
+  }
+
+  span {
+    display: block;
+    margin-top: 1rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+  }
+
 }
 
 .emptyPlayer {
@@ -83,12 +106,27 @@
     background: transparent;
     border: 0;
     font-size: 0; //0- reseto e centralizo imagem ou tamanho da fonte dentro do button.
+    
+    transition: 0.2s;
+
+    &:disabled {
+      cursor: default;  
+    }
+
+    &:hover:not(:disabled){// quando passar mouse no botão que não estiver desativado
+      filter: brightness(0.7);   // aplico efito de escurecimento brightness em 0.95
+
+    }
 
     &.playButton {
       width: 4rem;
       height: 4rem;
       border-radius: 1rem;
       background: var(--purple-400);
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.95);
+      }
     }
   }
 }

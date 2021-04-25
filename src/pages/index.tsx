@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import { GetStaticProps } from 'next';
 import Image from 'next/image'; //[Image]-- otimizar o carregamento Atomatico tamanho imagens não vetor do projeto, imagem externas link
                                 //ex: Image width={192} height={192} - largura e altura que carrego a imagem no html
@@ -6,9 +7,9 @@ import { format, parseISO } from 'date-fns'; //[parseISO]- pego String e convert
 import ptBR from 'date-fns/locale/pt-BR';
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
- 
+import { PlayerContext } from '../contexts/PlayerContext';
+
 import styles from './home.module.scss'
-import React from 'react';
 
  // tipagem de array de episodios
  type Episode = {
@@ -29,6 +30,9 @@ import React from 'react';
  }
 
  export default function Home({ latestEpisodes , allEpisodes }: HomeProps) {
+  const { play } = useContext(PlayerContext) // add contexts ao componente player
+  
+  
   return ( //retorno cada episodios do podcast 
     <div className={styles.homepage}> 
        <section className={styles.latestEpisodes}>
@@ -53,7 +57,7 @@ import React from 'react';
                       <span>{episode.publishedAt}</span>
                       <span>{episode.durationAsString}</span>
                    </div>
-                     <button type="button">
+                     <button type="button" onClick={() => play(episode)}>
                        <img src="/play-green.svg" alt="Tocar episódio" />
                      </button>
                 </li>

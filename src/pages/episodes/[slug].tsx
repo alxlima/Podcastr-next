@@ -30,7 +30,7 @@ type EpisodeProps = {
 }
 
 export default function Episode( { episode }: EpisodeProps) {
-   //const router = useRouter();
+  // const router = useRouter();
      return (
         <div className={styles.episode}>
            <div className={styles.thumbnailContainer}>
@@ -65,8 +65,24 @@ export default function Episode( { episode }: EpisodeProps) {
 }
 
 export const getStaticPaths: GetStaticPaths =async ()=> { //[getStaticPaths] - uso para paginas statica dinamincas [nome] ex: [slug]
+   const { data }= await api.get('episodes', { //[api.get]- pego Url padrão da Api em services/api.ts 
+      params: {
+        _limit: 2,           //[?_limit=12]- limito registro de podcast para retornar
+        _sort: 'published_at',//[&_sort]- ordenação  [published_at]- ordeno por data publicação,
+        _order:'desc'         //[&_order=desc]-ordem decrescente 
+      }
+   }) 
+   
+   const paths =  data.map(episode => {
+    return {
+       params: {
+         slug: episode.id
+      }
+    }
+   })
+
    return {
-      paths: [],
+      paths,
       fallback:'blocking'
    }
 }
