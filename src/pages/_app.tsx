@@ -1,7 +1,7 @@
 import '../styles/global.scss'// inporto css, in styles
 
-import Header from '../components/Header' // importa para todas telas do meu app
-import Player from '../components/Player';
+import { Header } from '../components/Header' // importa para todas telas do meu app
+import { Player } from '../components/Player';
 
 import styles from '../styles/app.module.scss';
 

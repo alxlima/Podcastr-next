@@ -2,7 +2,7 @@ import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import styles from './styles.module.scss'; // importo o Sas Css em componentes\Header
 
-export default function Header() {
+export  function Header() {
   const currenDate = format(new Date(), 'EEEEEE, d MMMM', {
    locale: ptBR,    
   });  //[toLocaleDateString]- converto data no forma brasil

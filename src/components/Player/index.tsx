@@ -1,7 +1,7 @@
 
 import styles from './styles.module.scss'; // importo o Sas Css em componentes\Header
 
-export default function Player() {
+export  function Player() { //removido  default - deve ajustar chaves no import {Player}
     return( 
       <div className={styles.playerContainer}>
 
