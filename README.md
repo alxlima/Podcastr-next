@@ -21,7 +21,7 @@
 </p>
 
 <!---------- Badges ----------------->  
-<p align="center">
+<div align="center">
   
   ![GitHub user](https://img.shields.io/static/v1?label=Made_by&message=Alex_Lima&color=6E40C9&labelColor=000000)
   ![GitHub License](https://img.shields.io/static/v1?label=License&message=MIT&color=6E40C9&labelColor=000000)
@@ -37,7 +37,7 @@
   <!----(008ed6)--Blue -->
   <!----(3292a6)--BlueMedium-->
   <!----(6E40C9)--Bluepurple-->
-  </p>
+  </div>
 <br>
 <!---------- showcase  ----------------->  
 <p align="center">
