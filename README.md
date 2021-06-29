@@ -22,7 +22,7 @@
 
 <!---------- Badges ----------------->  
 <p align="center">
-   <img src="https://img.shields.io/static/v1?label=made by&message=Alex Lima&color=6E40C9&labelColor=000000" alt="Alex Lima" />
+   <img src="https://img.shields.io/static/v1?label=made_by&message=Alex_Lima&color=6E40C9&labelColor=000000" alt="Alex Lima" />
 
   <img alt="Last commit" src="https://img.shields.io/static/v1?label=Last commit&message=April&color=6E40C9&labelColor=000000">
 
