@@ -22,6 +22,7 @@
 
 <!---------- Badges ----------------->  
 <p align="center">
+  
   ![GitHub user](https://img.shields.io/static/v1?label=Made_by&message=Alex_Lima&color=6E40C9&labelColor=000000)
   ![GitHub License](https://img.shields.io/static/v1?label=License&message=MIT&color=6E40C9&labelColor=000000)
   ![GitHub last commit](https://img.shields.io/github/last-commit/alxlima/Podcastr-next?color=6E40C9&labelColor=000000)
