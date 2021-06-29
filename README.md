@@ -22,13 +22,19 @@
 
 <!---------- Badges ----------------->  
 <p align="center">
-   <img src="https://img.shields.io/static/v1?label=made_by&message=Alex_Lima&color=6E40C9&labelColor=000000" alt="Alex Lima" />
+   
+  ![GitHub user](https://img.shields.io/static/v1?label=Made_by&message=Alex_Lima&color=6E40C9&labelColor=000000)
+  ![GitHub License](https://img.shields.io/static/v1?label=License&message=MIT&color=6E40C9&labelColor=000000)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/alxlima/Podcastr-next?color=6E40C9&labelColor=000000)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/alxlima/Podcastr-next?color=6E40C9&labelColor=000000)
+   
+   <!--img src="https://img.shields.io/static/v1?label=made_by&message=Alex_Lima&color=6E40C9&labelColor=000000" alt="Alex Lima" />
 
   <img alt="Last commit" src="https://img.shields.io/static/v1?label=Last commit&message=April&color=6E40C9&labelColor=000000">
 
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=6E40C9&labelColor=000000">
 
-  <img alt="repo size" src="https://img.shields.io/static/v1?label=repo size&message=145.8MB&color=6E40C9&labelColor=000000">
+  <img alt="repo size" src="https://img.shields.io/static/v1?label=repo size&message=145.8MB&color=6E40C9&labelColor=000000" -->
   <!----(4953b8)--BlueDark -->
   <!----(49AA26)--Green -->
   <!----(008ed6)--Blue -->
